@@ -59,7 +59,7 @@
                                     Мой профиль
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
+                                    <li><a class="dropdown-item  text-white" href="{% url "user:users_cart" %}">Корзина</a></li>
                                     <li><a class="dropdown-item  text-white" href="{% url "user:profile" %}">Личный кабинет</a>
                                     </li>
                                     {% if user.is_admin or user.is_staff %}
@@ -121,7 +121,6 @@
         </div>
     </section>
 
-    {% block footer %}{% endblock %}
 
     <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
     <script src="{% static "deps/js/jquery-ajax.js" %}"></script>
